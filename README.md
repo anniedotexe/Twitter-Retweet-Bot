@@ -1,6 +1,6 @@
 # Twitter Like and Retweet Bot
 
-![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+![Version 1.0.0](https://img.shields.io/badge/version-v1.0.0-blue)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-yellowgreen)](https://www.python.org/downloads/release/python-385/)
 [![Tweepy Version 3.9.0](https://img.shields.io/badge/tweepy-v3.9.0-brightgreen)](http://docs.tweepy.org/en/latest/)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
