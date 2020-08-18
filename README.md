@@ -8,17 +8,17 @@
 </span>
 
 
-
-
 A Twitter bot written in Python using Tweepy and deployed on AWS EC2. It will like and/or retweet tweets that contain single or multiple keywords and hashtags. 
 
 ---
 
 #### Buy Me a Coffee
 
-This project was created for the purpose of learning development, documentation, and deployment. Default values of the project are used to run [@ac_celeste_bot](https://twitter.com/ac_celeste_bot). 
+This project was created for the purpose of learning development, documentation, and deployment. 
 
-If you like this project or found this code useful, feel free to buy me a coffee :)
+Default values of the project are used to run [@ac_celeste_bot](https://twitter.com/ac_celeste_bot). 
+
+If you like my content or this code useful, give it a :star: or support me by buying me a coffee :coffee::grinning:
 
 <a href="https://www.buymeacoffee.com/awu2303" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
@@ -125,7 +125,7 @@ retweet_tweets = False
 like_tweets = True
 ```
 
-![Test Run](resources-for-readme/test.gif)
+![Test Run](https://media.giphy.com/media/dvNwarSvz9OSjpSAbd/giphy.gif)
 
 ---
 
@@ -134,29 +134,29 @@ like_tweets = True
 1. Launch an EC2 instance on AWS.
     - See [Additional Information](#additional-information) for more details.
 
-![Launch EC2 Instance](resources-for-readme/launch-instance.gif)
+![Launch EC2 Instance](https://media.giphy.com/media/RIBJvH1dyXCl4WGrNl/giphy.gif)
 
 2. Load the key-pair file (.pem) into PuTTYgen (which was downloaded when you installed [PuTTY](https://www.putty.org/)) and save the private key as a private key file (.ppk).
 
-![Generate PPK](resources-for-readme/generate-ppk.gif)
+![Generate PPK](https://media.giphy.com/media/iIGG5Pgf338zjaAHMr/giphy.gif)
 
 3. Connect to your instance on [WinSCP](https://winscp.net/eng/download.php).
     - The host name is ubuntu@[public DNS here].
     - Click Advanced, go to Authentication under SSH, and load the previously generated private key file (.ppk).
     - Login to the session.
 
-![Conenct to WinSCP](resources-for-readme/winscp-connect.gif)
+![Conenct to WinSCP](https://media.giphy.com/media/XDpwQS1KQA5ZyqmKaN/giphy.gif)
 
 4. Use [WinSCP](https://winscp.net/eng/download.php) to transfer the project's .py files to the server.
 
-![WinSCP File Transfer](resources-for-readme/winscp-transfer.gif)
+![WinSCP File Transfer](https://media.giphy.com/media/cltoUcOEABkI7h1seu/giphy.gif)
 
 5. Connect to your instance on a bash command line using one of the following ways.
     - Use a bash shell with the example ssh command (I use [Git Bash](https://gitforwindows.org/)).
         - Make sure you are in the directory with the key-pair file (.pem).
     - Use [PuTTY](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html?icmpid=docs_ec2_console) with the public DNS and private key file (.ppk).
     
-![Connect to Bash](resources-for-readme/bash-connect.gif)
+![Connect to Bash](https://media.giphy.com/media/JTDsQkn9CG0bkQTv7T/giphy.gif)
 
 6. Install python and pip to the server on the bash command line.
 ```
@@ -190,3 +190,4 @@ python3 twitter-bot.py
 
 - [Getting Started with Amazon EC2](https://aws.amazon.com/ec2/getting-started/)
 - [How to Continuously Run a Python Script on an EC2 Server](https://intellipaat.com/community/9361/how-to-continuously-run-a-python-script-on-an-ec2-server)
+- You can also try hosting the bot on [PythonAnywhere](https://www.pythonanywhere.com/)
