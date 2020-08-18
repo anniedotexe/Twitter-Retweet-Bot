@@ -190,4 +190,4 @@ python3 twitter-bot.py
 
 - [Getting Started with Amazon EC2](https://aws.amazon.com/ec2/getting-started/)
 - [How to Continuously Run a Python Script on an EC2 Server](https://intellipaat.com/community/9361/how-to-continuously-run-a-python-script-on-an-ec2-server)
-- You can also try hosting the bot on [PythonAnywhere](https://www.pythonanywhere.com/)
+- You can also host the bot on [PythonAnywhere](https://www.pythonanywhere.com/) and schedule the bot to run everyday at a specific time
