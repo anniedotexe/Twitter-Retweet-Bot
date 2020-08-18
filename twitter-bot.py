@@ -1,5 +1,5 @@
 """
-A Twitter bot written in Python using Tweepy and deployed on AWS EC2. 
+A Twitter bot written in Python using Tweepy. 
 It will like and/or retweet tweets that contain single or multiple keywords and hashtags.
 """
 
