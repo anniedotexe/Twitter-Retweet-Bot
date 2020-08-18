@@ -24,19 +24,24 @@ __status__ = 'Dev'
 logging.basicConfig(format='[%(asctime)s] %(levelname)s : %(message)s', datefmt='%m/%d/%Y %r', level=logging.INFO)
 logger = logging.getLogger()
 
+
 api = create_api()
 self = api.me()
 
+# Exclude retweets from search to avoid repeats
+
 if run_continuously:
     tweets = tweepy.Cursor(api.search,
-                       q=search_keywords + "-filter:retweets",
+                       q=search_keywords + " -filter:retweets", 
+                       count=100,
                        result_type=result_type,
                        monitor_rate_limit=True, 
                        wait_on_rate_limit=True,
                        lang="en").items()
 else:
     tweets = tweepy.Cursor(api.search,
-                       q=search_keywords + "-filter:retweets",
+                       q=search_keywords + " -filter:retweets",
+                       count=100,
                        result_type=result_type,
                        monitor_rate_limit=True, 
                        wait_on_rate_limit=True,
@@ -47,8 +52,8 @@ for tweet in tweets:
     tweet = api.get_status(tweet.id)
     logger.info(f"Processing tweet: {tweet.text}")
 
-    # Ignore tweets if author is myself
-    if tweet.user.id != self.id:
+    # Ignore tweet if it is from myself or if it is a reply to a tweet
+    if tweet.user.id != self.id or tweet.in_reply_to_status_id is not None:
 
         if retweet_tweets:
             if not tweet.retweeted:
@@ -56,7 +61,7 @@ for tweet in tweets:
                     tweet.retweet()
                     logger.info("Retweeted now")
                 except Exception as e:
-                    logger.error("Error in retweet", exc_info=True)
+                    logger.error("Error on retweet", exc_info=True)
                     raise e
             else:
                 logger.info("Has been retweeted previously")
@@ -67,7 +72,7 @@ for tweet in tweets:
                     tweet.favorite()
                     logger.info("Favorited now")
                 except Exception as e:
-                    logger.error("Error in favorite", exc_info=True)
+                    logger.error("Error on favorite", exc_info=True)
                     raise e
             else:
                 logger.info("Has been favorited previously")

@@ -3,28 +3,17 @@
 [![Python 3.8](https://img.shields.io/badge/python-3.8-yellowgreen)](https://www.python.org/downloads/release/python-385/)
 [![Tweepy Version 3.9.0](https://img.shields.io/badge/tweepy-v3.9.0-brightgreen)](http://docs.tweepy.org/en/latest/)
 
-A Twitter bot written in Python using Tweepy and deployed on AWS EC2. It will like and/or retweet tweets that contain single or multiple keywords and hashtags. Default values of the project are used to run [@ac_celeste_bot](twitter.com/ac_celeste_bot).
+A Twitter bot written in Python using Tweepy and deployed on AWS EC2. It will like and/or retweet tweets that contain single or multiple keywords and hashtags. Default values of the project are used to run [@ac_celeste_bot](https://twitter.com/ac_celeste_bot).
 
-<a href="https://www.buymeacoffee.com/awu2303" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-## What You Need & Need To Know
+## Requirements
 
 - [Python 3](https://www.python.org/downloads/)
 - [Pip](https://pypi.org/project/pip/) - a python package manager
-- [Tweepy](http://docs.tweepy.org/en/latest/install.html) - an easy-to-use python library for accessing Twitter's API
-- Make sure to follow [Twitter's Automation Rules](https://help.twitter.com/en/rules-and-policies/twitter-automation)
+- [Tweepy](http://docs.tweepy.org/en/latest/index.html) - an easy-to-use python library for accessing Twitter's API
 - [Amazon Web Services EC2](https://aws.amazon.com/ec2/) - a web service that provides secure, resizable compute capacity in the cloud
 - [PuTTY](https://www.putty.org/) - an open-source terminal emulator, serial console and network file transfer application
 - [WinSCP](https://winscp.net/eng/download.php) - a client that allows secure file transfers between the client's local computer and the remote server
-
-### File Structure
-```
-Twitter-Retweet-Bot
- |-- config.py
- |-- credentials.py
- |-- requirements.txt
- |-- twitter-bot.py
-```
+- Make sure to follow [Twitter's Automation Rules](https://help.twitter.com/en/rules-and-policies/twitter-automation) to avoid getting your account banned
 
 ### Instructions
 
@@ -49,6 +38,7 @@ TWITTER_ACCESS_TOKEN_SECRET="xxxx"
 ```
 
 4. Adjustments you can make in `config.py` to tweak the bot to your liking
+    - *Keep in mind the TwitterAPI search index has a 7-day limit, no tweets will be found for a date older than one week*
     - `search_keywords` - Keyword(s) and/or hashtag(s) that you want to retweet
     - `delay` - Time to wait between processing requests in seconds
         - Please be aware of the [TwitterAPI rate limits](https://developer.twitter.com/en/docs/twitter-api/v1/rate-limits)
@@ -57,14 +47,26 @@ TWITTER_ACCESS_TOKEN_SECRET="xxxx"
     - `number_of_tweets` - Specify the number of tweets you want the bot to iterate through
     - `run_continuously` - Set True if you want the bot to run continuously
         - Also set True if you will be deploying the script
-    - `retweet_tweets` and `like_tweets` - Adjust booleans for whether you want to only retweet, only like, or do both
+    - `retweet_tweets`, `like_tweets` - Adjust booleans for whether you want to only retweet, only like, or do both
 
 5. Install Tweepy
-`pip install tweepy` or `pip install -r requirements.txt`
+```
+pip install tweepy
+```
 
 6. Run the script. Enjoy your Twitter bot!
-`python twitter-bot.py`
+```
+python twitter-bot.py
+```
 
+### File Structure
+```
+Twitter-Retweet-Bot
+ |-- config.py
+ |-- credentials.py
+ |-- requirements.txt
+ |-- twitter-bot.py
+```
 
 ## Deployment
 
@@ -116,22 +118,22 @@ pip3 --version
 `python3 twitter-bot.py`
 
 10. See [Additional Information](#additional-information) for details on running the script continuously on EC2 server
-    - I use the `screen` option
+    - I used the `screen` option
 
 ## Test Running the Script
 
 Test `config.py` values:
 ```
-search_keywords = "%23overwatch OR %23mamamoo"
+keywords = '%23overwatch%20OR%20captain america'
 delay = 5
-result_type = "popular"
+result_type = 'popular'
 number_of_tweets = 5
 run_continuously = False
 retweet_tweets = False
 like_tweets = True
 ```
 
-![Test Run](resources-for-readme/test-run.gif)
+![Test Run](resources-for-readme/test.gif)
 
 
 ## Additional Information
@@ -139,3 +141,8 @@ like_tweets = True
 - [Getting Started with Amazon EC2](https://aws.amazon.com/ec2/getting-started/)
 - [How to Continuously Run a Python Script on an EC2 Server](https://intellipaat.com/community/9361/how-to-continuously-run-a-python-script-on-an-ec2-server)
 
+-----
+
+- This project was created for the purpose of learning development, documentation, and deployment.
+- If you like this project or found this code useful, feel free to buy me a coffee
+<a href="https://www.buymeacoffee.com/awu2303" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
