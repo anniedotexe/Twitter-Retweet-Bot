@@ -28,6 +28,8 @@ If you like this project or found this code useful, feel free to buy me a coffee
 
 1. [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
+        - [To Run the Bot](#to-run-the-bot)
+        - [To Deploy the Bot on AWS](#to-deploy-the-bot-on-aws)
 2. [Instructions](#instructions)
     - [File Structure](#file-structure)
 3. [Test Demo](#test-demo)
@@ -42,9 +44,12 @@ Make sure to follow [Twitter's Automation Rules](https://help.twitter.com/en/rul
 
 ### Prerequisites
 
+#### To run the bot
 - [Python 3](https://www.python.org/downloads/)
 - [Pip](https://pypi.org/project/pip/) - a python package manager
 - [Tweepy](http://docs.tweepy.org/en/latest/index.html) - an easy-to-use python library for accessing Twitter's API
+
+#### To deploy the bot on AWS
 - [Amazon Web Services EC2](https://aws.amazon.com/ec2/) - a web service that provides secure, resizable compute capacity in the cloud
 - [PuTTY](https://www.putty.org/) - an open-source terminal emulator, serial console and network file transfer application
 - [WinSCP](https://winscp.net/eng/download.php) - a client that allows secure file transfers between the client's local computer and the remote server
