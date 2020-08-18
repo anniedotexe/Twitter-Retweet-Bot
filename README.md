@@ -1,4 +1,4 @@
-# Twitter Like and Retweet Bot
+# Twitter Like and Retweet Bot 	:heart::repeat:
 
 ![Version 1.0.0](https://img.shields.io/badge/version-v1.0.0-blue)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-yellowgreen)](https://www.python.org/downloads/release/python-385/)
@@ -8,7 +8,7 @@
 </span>
 
 
-A Twitter bot written in Python using Tweepy and deployed on AWS EC2. It will like and/or retweet tweets that contain single or multiple keywords and hashtags. 
+A Twitter bot written in Python using Tweepy and hosted on a server. It will like and/or retweet tweets that contain single or multiple keywords and hashtags. 
 
 ---
 
@@ -26,15 +26,19 @@ If you like my content or this code useful, give it a :star: or support me by bu
 
 ### Table of Contents
 
-1. [Getting Started](#getting-started)
+- [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
         - [To Run the Bot](#to-run-the-bot)
-        - [To Deploy the Bot on AWS](#to-deploy-the-bot-on-aws)
-2. [Instructions](#instructions)
+        - [To Host the Bot](#to-host-the-bot)
+            - [On PythonAnywhere](#on-pythonanywhere)
+            - [On Amazon Web Services](on-amazon-web-services)
+- [Instructions](#instructions)
     - [File Structure](#file-structure)
-3. [Test Demo](#test-demo)
-4. [Deployment](#deployment)
-5. [Additional Information](#additional-information)
+- [Test Demo](#test-demo)
+- [Deployment](#deployment)
+    - [PythonAnywhere](#pythonanywhere)
+    - [Amazon Web Services](#amazon-web-services)
+- [Additional Information](#additional-information)
 
 ---
 
@@ -44,12 +48,23 @@ Make sure to follow [Twitter's Automation Rules](https://help.twitter.com/en/rul
 
 ### Prerequisites
 
-#### To run the bot
+#### To Run the Bot
+
 - [Python 3](https://www.python.org/downloads/)
 - [Pip](https://pypi.org/project/pip/) - a python package manager
 - [Tweepy](http://docs.tweepy.org/en/latest/index.html) - an easy-to-use python library for accessing Twitter's API
 
-#### To deploy the bot on AWS
+#### To Host the Bot
+
+Since the TwitterAPI search index can only retrieve tweets posted within the past 7 days, if the hashtags or keywords are not super popular, I would recommend hosting it on PythonAnywhere and scheduling a task to run `twitter-bot.py` at a certain time everyday, so the script will not just stop when there are no more tweets to process.
+
+Otherwise, you can deploy it on AWS EC2 to run the bot 24/7.
+
+##### On PythonAnywhere
+
+- [PythonAnywhere](https://www.pythonanywhere.com/) - an online integrated development environment and web hosting service based on the Python programming language
+
+##### On Amazon Web Services
 - [Amazon Web Services EC2](https://aws.amazon.com/ec2/) - a web service that provides secure, resizable compute capacity in the cloud
 - [PuTTY](https://www.putty.org/) - an open-source terminal emulator, serial console and network file transfer application
 - [WinSCP](https://winscp.net/eng/download.php) - a client that allows secure file transfers between the client's local computer and the remote server
@@ -131,7 +146,31 @@ like_tweets = True
 
 ## Deployment
 
-1. Launch an EC2 instance on AWS.
+Here is a tutorial on how to deploy / host the bot on a server.
+
+### PythonAnywhere
+
+1. Create a free Beginner [PythonAnywhere](https://www.pythonanywhere.com/pricing/) account.
+
+![Create Account](resources-for-readme/create-account.png)
+
+
+2. Go to Files, create a new Directory, upload the three `.py` files.
+
+![Upload Files](https://media.giphy.com/media/ggzrVLXPx3UYA9aWKM/giphy.gif)
+
+3. Copy the file path, go to Tasks, enter the [UTC](https://www.worldtimeserver.com/current_time_in_UTC.aspx) time you want the script to run at, and enter the python version and file path with `twitter-bot.py` at the end.
+
+```
+python 3.8 /home/account-name/directory-name/twitter-bot.py	
+```
+
+![Schedule Task](https://media.giphy.com/media/RfLrY3SZU5Zugca5Sz/giphy.gif)
+
+
+### Amazon Web Services
+
+1. Launch an EC2 instance on Amazon Web Services.
     - See [Additional Information](#additional-information) for more details.
 
 ![Launch EC2 Instance](https://media.giphy.com/media/RIBJvH1dyXCl4WGrNl/giphy.gif)
@@ -181,7 +220,7 @@ pip3 install tweepy
 python3 twitter-bot.py
 ```
 
-10. See [Additional Information](#additional-information) for details on running the script continuously on EC2 server.
+10. See [Additional Information](#additional-information) for details on running the script continuously.
     - I used the *screen* option.
 
 ---
@@ -190,4 +229,3 @@ python3 twitter-bot.py
 
 - [Getting Started with Amazon EC2](https://aws.amazon.com/ec2/getting-started/)
 - [How to Continuously Run a Python Script on an EC2 Server](https://intellipaat.com/community/9361/how-to-continuously-run-a-python-script-on-an-ec2-server)
-- You can also host the bot on [PythonAnywhere](https://www.pythonanywhere.com/) and schedule the bot to run everyday at a specific time
