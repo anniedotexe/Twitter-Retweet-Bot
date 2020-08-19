@@ -174,6 +174,9 @@ python3.8 /home/account-name/directory-name/twitter-bot.py
 
 ![Schedule Task](https://media.giphy.com/media/RfLrY3SZU5Zugca5Sz/giphy.gif)
 
+5. After the task runs as the scheduled time, you can check the task log to see the bot running
+
+![Check Logs]()
 
 ### Amazon Web Services
 
