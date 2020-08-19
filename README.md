@@ -158,7 +158,15 @@ Here is a tutorial on how to deploy / host the bot on a server.
 
 ![Upload Files](https://media.giphy.com/media/ggzrVLXPx3UYA9aWKM/giphy.gif)
 
-3. Copy the file path, go to Tasks, enter the [UTC](https://www.worldtimeserver.com/current_time_in_UTC.aspx) time you want the script to run at, and enter the python version and file path with `twitter-bot.py` at the end.
+3. Create a new bash console on your Dashboard and run pip with your python version to install tweepy
+
+![Bash Console](resources-for-readme/new-bash.png)
+
+```
+pip3.8 install --user tweepy
+```
+
+4. Copy the file path, go to Tasks, enter the [UTC](https://www.worldtimeserver.com/current_time_in_UTC.aspx) time you want the script to run at, and enter the python version and file path with `twitter-bot.py` at the end.
 
 ```
 python3.8 /home/account-name/directory-name/twitter-bot.py	
