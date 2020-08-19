@@ -161,7 +161,7 @@ Here is a tutorial on how to deploy / host the bot on a server.
 3. Copy the file path, go to Tasks, enter the [UTC](https://www.worldtimeserver.com/current_time_in_UTC.aspx) time you want the script to run at, and enter the python version and file path with `twitter-bot.py` at the end.
 
 ```
-python 3.8 /home/account-name/directory-name/twitter-bot.py	
+python3.8 /home/account-name/directory-name/twitter-bot.py	
 ```
 
 ![Schedule Task](https://media.giphy.com/media/RfLrY3SZU5Zugca5Sz/giphy.gif)
