@@ -176,7 +176,7 @@ python3.8 /home/account-name/directory-name/twitter-bot.py
 
 5. After the task runs as the scheduled time, you can check the task log to see the bot running
 
-![Check Logs]()
+![Check Logs](resources-for-readme/check-logs.png)
 
 ### Amazon Web Services
 
