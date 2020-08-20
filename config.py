@@ -2,7 +2,7 @@ import tweepy
 import logging
 from credentials import *
 
-logging.basicConfig(format='[%(asctime)s] %(levelname)s : %(message)s', datefmt='%m/%d/%Y %r', level=logging.INFO)
+logging.basicConfig(format='%(levelname)s : [%(asctime)s] %(message)s', datefmt='%m/%d/%Y %r', level=logging.INFO)
 logger = logging.getLogger()
 
 
