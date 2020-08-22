@@ -34,7 +34,6 @@ If you like my content or find this code useful, give it a :star: or support me 
             - [On Amazon Web Services](on-amazon-web-services)
 - [Instructions](#instructions)
     - [File Structure](#file-structure)
-- [Test Demo](#test-demo)
 - [Deployment](#deployment)
     - [PythonAnywhere](#pythonanywhere)
     - [Amazon Web Services](#amazon-web-services)
@@ -125,23 +124,6 @@ Twitter-Retweet-Bot
 
 ---
 
-## Test Demo
-
-Test `config.py` values:
-
-```
-keywords = '%23overwatch%20OR%20captain america'
-delay = 5
-result_type = 'popular'
-number_of_tweets = 5
-run_continuously = False
-retweet_tweets = False
-like_tweets = True
-```
-
-![Test Run](https://media.giphy.com/media/dvNwarSvz9OSjpSAbd/giphy.gif)
-
----
 
 ## Deployment
 
