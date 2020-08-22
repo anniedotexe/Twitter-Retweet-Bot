@@ -50,7 +50,10 @@ Make sure to follow [Twitter's Automation Rules](https://help.twitter.com/en/rul
 
 - [Python 3](https://www.python.org/downloads/)
 - [Pip](https://pypi.org/project/pip/) - a python package manager
+    - Download this [file](https://bootstrap.pypa.io/get-pip.py), open a command prompt and navigate to the folder containing the `get-pip.py` installer, and run `python get-pip.py` to install
+    - Run `pip --version` to check if it has installed correctly
 - [Tweepy](http://docs.tweepy.org/en/latest/index.html) - an easy-to-use python library for accessing Twitter's API
+    - Run `pip install tweepy`
 
 #### To Host the Bot
 
@@ -102,12 +105,7 @@ TWITTER_ACCESS_TOKEN_SECRET="xxxx"
         - Also set True if you will be deploying the script
     - **retweet_tweets**, **like_tweets** - Adjust booleans for whether you want to only retweet, only like, or do both
 
-5. Install [Tweepy](http://docs.tweepy.org/en/latest/index.html).
-```
-pip install tweepy
-```
-
-6. Run the script. Enjoy your Twitter bot!
+5. Run the script. Enjoy your Twitter bot!
 ```
 python twitter-bot.py
 ```
