@@ -2,9 +2,13 @@ import tweepy
 import logging
 from credentials import *
 
-logging.basicConfig(format='%(levelname)s : [%(asctime)s] %(message)s', datefmt='%m/%d/%Y %r', level=logging.INFO)
+logging.basicConfig(format='%(levelname)s [%(asctime)s] %(message)s', datefmt='%m/%d/%Y %r', level=logging.INFO)
 logger = logging.getLogger()
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Adjust the values below to tweak the bot to your liking
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 # Keyword(s) and/or hashtag(s) that you want to like / retweet
 # Basic Formatting:
@@ -18,7 +22,7 @@ search_keywords = "%22animal crossing%22celeste"
 
 # Time to wait between processing a request in seconds 
 # Information about TwitterAPI limits here: https://developer.twitter.com/en/docs/twitter-api/v1/rate-limits
-delay = 300
+delay = 100
 
 # Specify what type of search results you want to get
 # 'recent', 'popular', or 'mixed'
