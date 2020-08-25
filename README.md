@@ -12,18 +12,6 @@ A Twitter bot written in Python using Tweepy and hosted on a server. It will lik
 
 ---
 
-#### Buy Me a Coffee
-
-This project was created for the purpose of learning development, documentation, and deployment. 
-
-Default values of the project are used to run [@ac_celeste_bot](https://twitter.com/ac_celeste_bot). 
-
-If you like my content or find this code useful, give it a :star: or support me by buying me a coffee :coffee::grinning:
-
-<a href="https://www.buymeacoffee.com/awu2303" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
----
-
 ### Table of Contents
 
 - [Getting Started](#getting-started)
@@ -37,7 +25,9 @@ If you like my content or find this code useful, give it a :star: or support me 
 - [Deployment](#deployment)
     - [PythonAnywhere](#pythonanywhere)
     - [Amazon Web Services](#amazon-web-services)
+- [Creator / Maintainer](#creator-maintainer)
 - [Additional Information](#additional-information)
+
 ---
 
 ## Getting Started
@@ -212,6 +202,22 @@ python3 twitter-bot.py
 
 10. See [Additional Information](#additional-information) for details on running the script continuously.
     - I used the *screen* option.
+
+---
+
+### Creator / Maintainer
+
+Annie Wu ([anniewu2303](https://github.com/anniewu2303)) <a href="mailto:anniewu2303@gmail.com"> 
+    <img alt="Connect via Email" src="https://img.shields.io/badge/Gmail-c14438?style=flat&logo=Gmail&logoColor=white" />
+</a>
+
+This project was created for educational purposes of learning development, documentation, and deployment and for personal and open-source use.
+
+Default values of the project are used to run [@ac_celeste_bot](https://twitter.com/ac_celeste_bot). 
+
+If you like my content or find this code useful, give it a :star: or support me by buying me a coffee :coffee::grinning:
+
+<a href="https://www.buymeacoffee.com/awu2303" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ---
 
