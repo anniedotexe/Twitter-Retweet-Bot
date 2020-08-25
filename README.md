@@ -207,9 +207,7 @@ python3 twitter-bot.py
 
 ### Creator / Maintainer
 
-Annie Wu ([anniewu2303](https://github.com/anniewu2303)) <a href="mailto:anniewu2303@gmail.com"> 
-    <img alt="Connect via Email" src="https://img.shields.io/badge/Gmail-c14438?style=flat&logo=Gmail&logoColor=white" />
-</a>
+Annie Wu ([anniewu2303](https://github.com/anniewu2303)) 
 
 This project was created for educational purposes of learning development, documentation, and deployment and for personal and open-source use.
 
