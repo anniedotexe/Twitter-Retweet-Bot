@@ -180,9 +180,10 @@ python3.8 /home/account-name/directory-name/twitter-bot.py
 6. Install python and pip to the server on the bash command line.
 ```
 sudo apt update 
+sudo apt upgrade
 sudo apt install python3
 sudo apt install python3-pip
-pip install --upgrade pip
+pip3 install update pip
 ```
 
 7. Check if python and pip have been installed correctly.
