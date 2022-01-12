@@ -23,7 +23,7 @@ A Twitter bot written in Python using Tweepy and hosted on a server. It will lik
   - [PythonAnywhere](#pythonanywhere)
   - [Amazon Web Services](#amazon-web-services)
 - [Contributing](#contributing)
-- [Creator / Maintainer](#creator-maintainer)
+- [Creator / Maintainer](#creator--maintainer)
 - [Additional Information](#additional-information)
 
 ---
